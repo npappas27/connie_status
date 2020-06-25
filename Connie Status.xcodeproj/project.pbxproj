@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0895832124A44E2D006CFE62 /* connie.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 0895832024A44E2D006CFE62 /* connie.mp3 */; };
 		08EC267724A40EA60078F0B8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08EC267624A40EA60078F0B8 /* AppDelegate.swift */; };
 		08EC267924A40EA60078F0B8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08EC267824A40EA60078F0B8 /* SceneDelegate.swift */; };
 		08EC267B24A40EA60078F0B8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08EC267A24A40EA60078F0B8 /* ViewController.swift */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0895832024A44E2D006CFE62 /* connie.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = connie.mp3; path = ../../../Downloads/connie.mp3; sourceTree = "<group>"; };
 		08EC267324A40EA60078F0B8 /* Connie Status.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Connie Status.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		08EC267624A40EA60078F0B8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		08EC267824A40EA60078F0B8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -56,6 +58,7 @@
 		08EC267524A40EA60078F0B8 /* Connie Status */ = {
 			isa = PBXGroup;
 			children = (
+				0895832024A44E2D006CFE62 /* connie.mp3 */,
 				08EC267624A40EA60078F0B8 /* AppDelegate.swift */,
 				08EC267824A40EA60078F0B8 /* SceneDelegate.swift */,
 				08EC267A24A40EA60078F0B8 /* ViewController.swift */,
@@ -126,6 +129,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				08EC268324A40EA90078F0B8 /* LaunchScreen.storyboard in Resources */,
+				0895832124A44E2D006CFE62 /* connie.mp3 in Resources */,
 				08EC268024A40EA90078F0B8 /* Assets.xcassets in Resources */,
 				08EC267E24A40EA60078F0B8 /* Main.storyboard in Resources */,
 			);
