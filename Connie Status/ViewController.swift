@@ -12,13 +12,17 @@ import AVFoundation
 
 class ViewController: UIViewController {
     let stackView = UIStackView()
-    let scrollView = UIScrollView()
     var audioPlayer: AVAudioPlayer!
+
+    @IBOutlet weak var scrollView: UIScrollView!
     
     override func viewDidLoad() {
         
         
         let screenWidth = view.bounds.width
+        let scrollView = UIScrollView(frame: CGRect(x: 0, y: 0, width: screenWidth - 1, height: view.bounds.height))
+        scrollView.backgroundColor = UIColor.red
+        scrollView.isDirectionalLockEnabled = true
         stackView.backgroundColor = UIColor.red
         
         
@@ -48,6 +52,8 @@ class ViewController: UIViewController {
         daysSinceGraduationLabel.numberOfLines = 3
         daysSinceGraduationLabel.textAlignment = .center
         daysSinceGraduationLabel.font = UIFont(name: "Avenir-Roman", size: 48)
+        daysSinceGraduationLabel.layer.borderWidth = 3
+        daysSinceGraduationLabel.layer.borderColor = UIColor.black.cgColor
         
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "yyyy-MM-dd"
@@ -79,20 +85,21 @@ class ViewController: UIViewController {
         
         
         let button = UIButton(type: UIButton.ButtonType.system) as UIButton
-        
-        let xPostion:CGFloat = 0
-        let yPostion:CGFloat = 775
-        let buttonWidth:CGFloat = 150
-        let buttonHeight:CGFloat = 45
-        
-        button.frame = CGRect(x:xPostion, y:yPostion, width:buttonWidth, height:buttonHeight)
-        
+        button.frame = CGRect(x:0, y:775, width:screenWidth, height:150)
         button.backgroundColor = UIColor.lightGray
         button.isUserInteractionEnabled = true
         button.setTitle("Tap me", for: UIControl.State.normal)
         button.tintColor = UIColor.black
         button.addTarget(self, action: #selector(ViewController.buttonAction(_:)), for: .touchUpInside)
         
+        
+        let button2 = UIButton(type: UIButton.ButtonType.system) as UIButton
+        button2.frame = CGRect(x:0, y:925, width:screenWidth, height:150)
+        button2.backgroundColor = UIColor.lightGray
+        button2.isUserInteractionEnabled = true
+        button2.setTitle("Tap me", for: UIControl.State.normal)
+        button2.tintColor = UIColor.black
+        button2.addTarget(self, action: #selector(ViewController.buttonAction(_:)), for: .touchUpInside)
         
         button.backgroundColor = .orange
         stackView.alignment = .fill
@@ -105,10 +112,12 @@ class ViewController: UIViewController {
         stackView.addSubview(daysSinceGraduationLabel)
         stackView.addSubview(hungoverLabel)
         stackView.addSubview(hungoverYesOrNoLabel)
-        view.addSubview(button)
-        view.addSubview(stackView)
+        stackView.addSubview(button)
+        stackView.addSubview(button2)
+        scrollView.contentSize = CGSize(width: screenWidth, height: 4000)
+        scrollView.addSubview(stackView)
+        view.addSubview(scrollView)
         super.viewDidLoad()
-        
     }
     
     @objc func buttonAction(_ sender:UIButton!){
